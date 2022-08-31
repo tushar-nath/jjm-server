@@ -16,7 +16,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const routes = require('./Routes/Route')
 app.use('/', routes)
 
+// PORT
+const PORT = process.env.PORT || 3000;
 //start server
-app.listen(3000, ()=>{
-    console.log("listeniing at port:3000")
-}) 
+app.listen(PORT, () =>
+  console.log(`Application is listening on port ${PORT}!`)
+);
